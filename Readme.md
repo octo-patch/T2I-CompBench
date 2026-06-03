@@ -215,7 +215,7 @@ cd $project_dir
 python gpt4v_eval.py --provider minimax --category "color" --start 0 --step 10
 ```
 
-The `--provider` argument accepts `openai` (default, uses GPT-4V) or `minimax` (uses MiniMax-M3 by default). The API key is read from `OPENAI_API_KEY` or `MINIMAX_API_KEY` respectively. To use the previous MiniMax model instead, pass `--model MiniMax-M2.7`.
+The `--provider` argument accepts `openai` (default, uses GPT-4V) or `minimax` (uses MiniMax-M3 by default). The API key is read from `OPENAI_API_KEY` or `MINIMAX_API_KEY` respectively. To use a previous MiniMax model instead, pass `--model MiniMax-M2.7` or `--model MiniMax-M2.7-highspeed`.
 
 The output files are formatted as a json file named "gpt4v_result\_{start}\_{step}.json" in "examples/gpt4v" directory.
 

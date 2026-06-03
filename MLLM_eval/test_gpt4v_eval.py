@@ -62,6 +62,9 @@ class TestProviderConfigs(unittest.TestCase):
     def test_minimax_retains_m27(self):
         self.assertIn("MiniMax-M2.7", PROVIDER_CONFIGS["minimax"]["models"])
 
+    def test_minimax_retains_m27_highspeed(self):
+        self.assertIn("MiniMax-M2.7-highspeed", PROVIDER_CONFIGS["minimax"]["models"])
+
     def test_minimax_drops_deprecated_models(self):
         models = PROVIDER_CONFIGS["minimax"]["models"]
         for old in ("MiniMax-M2.5", "MiniMax-M2.1", "MiniMax-M2", "MiniMax-M1"):

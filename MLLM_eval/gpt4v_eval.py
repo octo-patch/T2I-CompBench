@@ -24,7 +24,7 @@ PROVIDER_CONFIGS = {
     "minimax": {
         "base_url": "https://api.minimax.io/v1/chat/completions",
         "model": "MiniMax-M3",
-        "models": ["MiniMax-M3", "MiniMax-M2.7"],
+        "models": ["MiniMax-M3", "MiniMax-M2.7", "MiniMax-M2.7-highspeed"],
         "api_key_env": "MINIMAX_API_KEY",
     },
 }
@@ -67,8 +67,8 @@ def parse_args():
         "--model",
         type=str,
         default=None,
-        help="Override the provider's default model. For 'minimax' choose MiniMax-M3 (default) "
-             "or MiniMax-M2.7. Defaults to the provider's configured model.",
+        help="Override the provider's default model. For 'minimax' choose MiniMax-M3 (default), "
+             "MiniMax-M2.7, or MiniMax-M2.7-highspeed. Defaults to the provider's configured model.",
     )
 
     return parser.parse_args()
